@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1E90FF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .content p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .content form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content input,
+        .content textarea {
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+
+        .content input::placeholder,
+        .content textarea::placeholder {
+            color: #bbb;
+            font-style: italic;
+        }
+
+        .content input:focus,
+        .content textarea:focus {
+            border: 2px solid #1E90FF;
+            box-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+            outline: none;
+        }
+
+        .content button {
+            padding: 15px;
+            background: linear-gradient(90deg, #1E90FF, #00BFFF);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-size: 16px;
+        }
+
+        .content button:hover {
+            background: linear-gradient(90deg, #00BFFF, #1E90FF);
+            transform: translateY(-2px);
+        }
+
+        .content button:active {
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(184, 175, 176);">
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="content">
+        <h2>Get in Touch</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+
+</html>

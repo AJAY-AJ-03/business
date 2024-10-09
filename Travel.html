@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Services - Explore the World</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .banner {
+      background: url('https://cdn.pixabay.com/photo/2017/01/20/00/30/maldives-1993704_640.jpg') no-repeat center center/cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      margin: 0;
+    }
+
+    .services-section {
+      background-color: #f4f4f9;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .services-section h2 {
+      font-size: 28px;
+      color: #1E90FF;
+      margin-bottom: 20px;
+    }
+
+    .service-card-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: 15px;
+      padding: 20px;
+      transition: transform 0.2s;
+      text-align: left;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .service-card i {
+      color: #1E90FF;
+      margin-right: 10px;
+    }
+
+    .map-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    #map {
+      height: 450px;  /* Set the height of the map */
+      width: 100%;    /* Set the width of the map */
+      max-width: 800px; /* Limit max width */
+      border-radius: 8px; /* Optional: Add rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+      margin: 20px auto; /* Center the map */
+    }
+
+    .testimonials {
+      background-color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .testimonials h2 {
+      font-size: 28px;
+      color: #1E90FF;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-item {
+      font-style: italic;
+      margin: 20px 0;
+      color: #555;
+    }
+
+    .call-to-action {
+      background-color: #1E90FF;
+      color: #ffffff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .call-to-action h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .call-to-action a {
+      background-color: #ffffff;
+      color: #1E90FF;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .call-to-action a:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+
+<body style="background-color: rgb(184, 175, 176);">
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <div class="header-top-actions">
+          <select name="currency">
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+          </select>
+          <select name="language">
+            <option value="en-US">English</option>
+            <option value="es-ES">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <span style="font-size: 24px; font-weight: bold; color: #1E90FF; letter-spacing: 2px;">ANJENFLY SRIRAM SERVICES</span>
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+        </div>
+        <div class="header-user-actions">
+          <button class="action-btn"><ion-icon name="person-outline"></ion-icon></button>
+          <button class="action-btn"><ion-icon name="heart-outline"></ion-icon><span class="count">0</span></button>
+          <button class="action-btn"><ion-icon name="bag-handle-outline"></ion-icon><span class="count">0</span></button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+          <li class="menu-category"><a href="about.html" class="menu-title">About</a></li>
+          <li class="menu-category"><a href="services.html" class="menu-title">Services</a></li>
+          <li class="menu-category"><a href="Recruitment.html" class="menu-title">Recruitment</a></li>
+          <li class="menu-category"><a href="Travel.html" class="menu-title">Travel</a></li>
+          <li class="menu-category"><a href="finance.html" class="menu-title">Finance</a></li>
+          <li class="menu-category"><a href="insurance.html" class="menu-title">Insurance</a></li>
+          <li class="menu-category"><a href="contact.html" class="menu-title">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn"><ion-icon name="bag-handle-outline"></ion-icon><span class="count">0</span></button>
+      <button class="action-btn"><ion-icon name="home-outline"></ion-icon></button>
+      <button class="action-btn"><ion-icon name="heart-outline"></ion-icon><span class="count">0</span></button>
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+        <li class="menu-category"><a href="services.html" class="menu-title">Services</a></li>
+        <li class="menu-category"><a href="features.html" class="menu-title">Features</a></li>
+        <li class="menu-category"><a href="about.html" class="menu-title">About</a></li>
+        <li class="menu-category"><a href="business.html" class="menu-title">Business</a></li>
+        <li class="menu-category"><a href="blog.html" class="menu-title">Blog</a></li>
+        <li class="menu-category"><a href="contact.html" class="menu-title">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="banner">
+      <h1>Explore the World with Us!</h1>
+    </div>
+
+    <div class="services-section">
+      <h2>Our Services</h2>
+      <div class="service-card-container">
+        <div class="service-card">
+          <img src="https://www.shutterstock.com/image-photo/woman-photographer-big-backpack-taking-600nw-2176161815.jpg" alt="Service 1">
+          <h3><i class="fas fa-plane"></i> Domestic</h3>
+          <p>Explore our amazing travel packages tailored for your adventures!</p>
+        </div>
+        <div class="service-card">
+          <img src="https://news.thrillophilia.com/content/images/2020/04/0a1a-75.jpg" alt="Service 2">
+          <h3><i class="fas fa-bed"></i> International</h3>
+          <p>Stay in the most luxurious hotels around the world!</p>
+        </div>
+        <!-- <div class="service-card">
+          <img src="https://example.com/service3.jpg" alt="Service 3">
+          <h3><i class="fas fa-user-tie"></i> Expert Guides</h3>
+          <p>Get accompanied by the best guides for an unforgettable experience!</p>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="map-section">
+      <h2>Our Location</h2>
+      <div id="map"></div>
+    </div>
+
+    <div class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-item">"Best travel experience ever!" - Jane Doe</div>
+      <div class="testimonial-item">"Highly recommend their services!" - John Smith</div>
+    </div>
+
+    <div class="call-to-action">
+      <h2>Ready to Book Your Adventure?</h2>
+      <a href="booking.html">Book Now</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2024 Anjenfly sriram services. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([51.505, -0.09]).addTo(map)
+      .bindPopup('Your Travel Company Location!')
+      .openPopup();
+  </script>
+</body>
+
+</html>
